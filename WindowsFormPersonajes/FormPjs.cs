@@ -25,15 +25,41 @@ namespace WindowsFormPersonajes
         {
             Jugador jugador = new Jugador(txtName.Text, Convert.ToInt32(txtLife.Text), Convert.ToInt32(txtDam.Text));
             JugadoresDB.Crear(jugador);
-            DGVPlayers.DataSource = JugadoresDB.CargaDGV();
+            DGVPlayers.DataSource = JugadoresDB.CargarDGV();
         }
 
-        private void btTest_Click(object sender, EventArgs e)
+        private void btMod_Click(object sender, EventArgs e)
         {
-            Jugador jugadorNuevo;
-            jugadorNuevo = new Jugador(txtName.Text, int.Parse(txtLife.Text), int.Parse(txtDam.Text));
+            Jugador jugador = new Jugador(txtName.Text, Convert.ToInt32(txtLife.Text), Convert.ToInt32(txtDam.Text));
+            {
+                try
+                {
+                    JugadoresDB.Actualizar(jugador);
+                    DGVPlayers.DataSource = JugadoresDB.CargarDGV();
+                    MessageBox.Show("Jugador Actualizado");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error al actualizar el jugador: " + ex.Message);
+                }
+            }
+        }
 
-            MessageBox.Show("Jugador Creado");
+        private void btDel_Click(object sender, EventArgs e)
+        {
+            JugadoresDB.Eliminar(txtName.Text); 
+            DGVPlayers.DataSource = JugadoresDB.CargarDGV();
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            FormIntermedio ventana = new FormIntermedio();
+            ventana.Show();
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

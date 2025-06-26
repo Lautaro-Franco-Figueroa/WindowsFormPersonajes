@@ -8,19 +8,32 @@ namespace Entidades
 {
     public class Partida
     {
-        private int Tiempo;
-        private int Rondas;
-        private string Ganador;
-        private string Perdedor;
+        private string Nombre;
+        private DateTime Fecha;
+        private string Resultado;
+
+        #region Propiedades
+        public string j_Nombre
+        {
+            set { Nombre = value; }
+            get { return Nombre; }
+        }
+        public string j_Resultado
+        {
+            set { Resultado = value; }
+            get { return Resultado; }
+        }
+        #endregion
 
         public Partida()
-        { }
-        public Partida(int time, int rounds)
         {
-            Tiempo = time;
-            Rondas = rounds;
-            Ganador = "";
-            Perdedor = "";
+            Fecha = DateTime.Now;
+        }
+        public Partida(string nombre)
+        {
+            Nombre = nombre;
+            Fecha = DateTime.Now;
+            Resultado = "";
         }
     }
 }

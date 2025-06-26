@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormIntermedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIntermedio.Designer.cs">
+      <DependentUpon>FormIntermedio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPelea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPelea.Designer.cs">
+      <DependentUpon>FormPelea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPjs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormIntermedio.resx">
+      <DependentUpon>FormIntermedio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPelea.resx">
+      <DependentUpon>FormPelea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPjs.resx">
       <DependentUpon>FormPjs.cs</DependentUpon>
     </EmbeddedResource>
