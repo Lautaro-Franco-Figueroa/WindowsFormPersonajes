@@ -43,7 +43,7 @@ namespace Entidades
 
         public void Atacar(int life, int dam)
         {
-            Vida = life - dam;
+            p_Vida = life - dam;
         }
     }
 }

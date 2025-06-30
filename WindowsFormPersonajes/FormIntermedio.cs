@@ -22,7 +22,6 @@ namespace WindowsFormPersonajes
         private void btStart_Click(object sender, EventArgs e)
         {
             FormPelea ventana = new FormPelea();
-            Jugador jugador = JugadoresDB.Buscar(txtPj.Text);
             ventana.NombreJugador = txtPj.Text;
             ventana.Show();
         }

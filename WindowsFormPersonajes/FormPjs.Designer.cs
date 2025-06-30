@@ -39,10 +39,8 @@
             this.btMod = new System.Windows.Forms.Button();
             this.DGVPlayers = new System.Windows.Forms.DataGridView();
             this.btNext = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPlayers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,14 +139,6 @@
             this.btNext.UseVisualStyleBackColor = true;
             this.btNext.Click += new System.EventHandler(this.btNext_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(572, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(303, 225);
-            this.dataGridView1.TabIndex = 12;
-            // 
             // btSearch
             // 
             this.btSearch.Location = new System.Drawing.Point(653, 46);
@@ -165,7 +155,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 450);
             this.Controls.Add(this.btSearch);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btNext);
             this.Controls.Add(this.DGVPlayers);
             this.Controls.Add(this.btMod);
@@ -180,7 +169,6 @@
             this.Name = "FormPjs";
             this.Text = "FormPjs";
             ((System.ComponentModel.ISupportInitialize)(this.DGVPlayers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +187,6 @@
         private System.Windows.Forms.Button btMod;
         private System.Windows.Forms.DataGridView DGVPlayers;
         private System.Windows.Forms.Button btNext;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btSearch;
     }
 }

@@ -18,6 +18,11 @@ namespace Entidades
             set { Nombre = value; }
             get { return Nombre; }
         }
+        public DateTime j_Fecha
+        {
+            set { Fecha = value; }
+            get { return Fecha; }
+        }
         public string j_Resultado
         {
             set { Resultado = value; }
@@ -29,11 +34,11 @@ namespace Entidades
         {
             Fecha = DateTime.Now;
         }
-        public Partida(string nombre)
+        public Partida(string nombre, string resultado)
         {
             Nombre = nombre;
             Fecha = DateTime.Now;
-            Resultado = "";
+            Resultado = resultado;
         }
     }
 }
